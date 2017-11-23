@@ -35,6 +35,8 @@ class DosesController < ApplicationController
         format.json { render json: @dose.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   # PATCH/PUT /doses/1
@@ -69,6 +71,6 @@ class DosesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dose_params
-      params.require(:dose).permit(:description, :cokctail_id, :ingredient_id)
+      params.require(:dose).permit(:description, :cocktail_id, :ingredient_id)
     end
 end
