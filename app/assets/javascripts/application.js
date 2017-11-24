@@ -15,4 +15,3 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
