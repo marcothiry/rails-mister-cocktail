@@ -37,6 +37,7 @@ gem 'jquery-rails'
 gem 'figaro'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
