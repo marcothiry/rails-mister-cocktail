@@ -30,7 +30,7 @@ class CocktailsController < ApplicationController
 
     respond_to do |format|
       if @cocktail.save
-        format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
+        format.html { redirect_to cocktail_path(@cocktail.id), notice: 'Cocktail was successfully created.' }
         format.json { render :show, status: :created, location: @cocktail }
       else
         format.html { render :new }
@@ -59,7 +59,7 @@ class CocktailsController < ApplicationController
   def destroy
     @cocktail.destroy
     respond_to do |format|
-      format.html { redirect_to cocktails_url, notice: 'Cocktail was successfully destroyed.' }
+      format.html { redirect_to cocktails_path, notice: 'Cocktail was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -72,6 +72,6 @@ class CocktailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cocktail_params
-      params.require(:cocktail).permit(:name, :photo, :photo_cacherails)
+      params.require(:cocktail).permit(:name, :photo, :photo_cache)
     end
 end
