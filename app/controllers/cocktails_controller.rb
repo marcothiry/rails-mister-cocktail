@@ -42,9 +42,10 @@ class CocktailsController < ApplicationController
   # PATCH/PUT /cocktails/1
   # PATCH/PUT /cocktails/1.json
   def update
+
     respond_to do |format|
       if @cocktail.update(cocktail_params)
-        format.html { redirect_to @cocktail, notice: 'Cocktail was successfully updated.' }
+        format.html { redirect_to cocktail_path(@cocktail.id), notice: 'Cocktail was successfully updated.' }
         format.json { render :show, status: :ok, location: @cocktail }
       else
         format.html { render :edit }

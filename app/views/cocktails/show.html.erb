@@ -11,6 +11,8 @@
     <tr>
       <th>Ingredient</th>
       <th>Comment</th>
+      <th>Options</th>
+
 
     </tr>
   </thead>
@@ -20,6 +22,7 @@
       <tr>
         <td><%= dose.ingredient.name %></td>
         <td><%= dose.description %></td>
+        <td><%= link_to "Delete",  cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' } %>
       </tr>
     <% end %>
   </tbody>
