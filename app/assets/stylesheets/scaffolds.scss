@@ -1,84 +1,100 @@
+/* --- Keep this sheet --- */
+/* --- Google Fonts --- */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Montserrat:400,700");
+@import url("components/card.css");
+
+/* --- Fonts --- */
 body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  padding-bottom: 200px;
+  margin: 0;
+  background: #F4F4F4;
 }
-
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+h1, h2, h3 {
+  font-family: "Montserrat", "sans-serif";
 }
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
 a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.text-center {
+  text-align: center;
+}
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+.list-inline li {
+  display: inline-block;
 }
 
-th {
-  padding-bottom: 5px;
+/*TODO: add css to display 3 aligned cards*/
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  flex: 0 0 32%;
 }
 
-td {
-  padding: 0 5px 7px;
+.card-body {
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px #B3B3B3;
+}
+.card-picture {
+  height: 200px;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+.card-likes {
+  color: #B3B3B3;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
-
-#notice {
-  color: green;
+.card-likes li {
+  padding: 0 5px;
 }
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+.card-likes i {
+  padding-right: 5px;
 }
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    background-color: #c00;
-    color: #fff;
-  }
-
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
+.card-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
 }
-
-label {
-  display: block;
+.card-footer img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.card-footer a {
+  color: #3a8bbb;
+  font-weight: bold;
+}
+.card-hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.card-picture:hover .card-hover {
+  opacity: 1;
 }
