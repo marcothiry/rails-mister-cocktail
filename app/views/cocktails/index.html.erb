@@ -20,14 +20,7 @@
           <!--Title-->
           <h4 class="card-title"><%= cocktail.name %></h4>
           <!--Text-->
-          <div class="options">
-            <div class="edit">
-              <%= link_to 'Edit', edit_cocktail_path(cocktail), class: "btn btn-primary" %>
-            </div>
-            <div class="destroy">
-              <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
